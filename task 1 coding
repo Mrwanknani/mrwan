@@ -1,0 +1,40 @@
+#include<Servo.h>
+Servo servo1; 
+Servo servo2;
+Servo servo3;        //initialize a servo object for the connected servo
+Servo servo4;
+Servo servo5;  
+                
+int position = 0;    
+ 
+void setup() 
+{ 
+  servo1.attach(13); 
+  servo2.attach(11);
+  servo3.attach(9);   // attach each servo to the crossepoding pin in Arduino
+  servo4.attach(7);
+  servo5.attach(4);
+} 
+  
+void loop() 
+{ 
+  for(position=0 ; position < 90 ; position+=1) 	
+  {                                  
+    servo1.write(position);              	 
+    
+      
+      servo2.write(position);              	 
+     
+    
+    servo3.write(position);              	 
+    
+    
+    servo4.write(position);              	 
+    
+    
+    servo5.write(position);              	 
+     
+  delay(20);
+ 
+}
+}
